@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "item": "sullysmod_additions:lanternfish_slice"
+          },
+          {
+            "item": "sullysmod_additions:lanternfish_slice"
+          },
+          {
+            "item": "farmersdelight:cooked_rice"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "sullysmod_additions:lanternfish_roll"
+        }
+      }
+    }
+  ]
+}

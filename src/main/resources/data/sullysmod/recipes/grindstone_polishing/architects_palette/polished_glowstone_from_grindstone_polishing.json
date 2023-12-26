@@ -1,0 +1,18 @@
+{
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
+    {
+      "item": "minecraft:glowstone"
+    }
+  ],
+  "result": {
+    "item": "architects_palette:polished_glowstone"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "architects_palette"
+    }
+  ]
+}

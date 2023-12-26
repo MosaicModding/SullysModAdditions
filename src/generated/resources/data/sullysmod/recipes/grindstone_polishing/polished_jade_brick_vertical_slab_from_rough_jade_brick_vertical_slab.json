@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "blueprint:quark_flag",
+          "flag": "vertical_slabs"
+        }
+      ],
+      "recipe": {
+        "type": "sullysmod:grindstone_polishing",
+        "experience": 0,
+        "ingredients": [
+          {
+            "item": "sullysmod_additions:rough_jade_brick_vertical_slab"
+          }
+        ],
+        "result": {
+          "item": "sullysmod_additions:polished_jade_brick_vertical_slab"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+modLoader="javafml" #mandatory
+loaderVersion="[47,)" #mandatory
+license="GNU Lesser General Public License v3.0"
+issueTrackerURL="https://github.com/Uraneptus/Sullys-Mod/issues"
+
+[[mods]] #mandatory
+modId = "sullysmod_additions" #mandatory
+version = "${file.jarVersion}" #mandatory
+logoFile = "sullysmod_banner.png" #optional
+authors = "Uraneptus" #optional
+credits = "Idea & Assets by GoesBySully" #optional
+displayURL = "https://github.com/Uraneptus/Sullys-Mod"
+displayName = "Sully's Mod Additions" #mandatory
+updateJSONURL = "https://api.modrinth.com/updates/sullysmod/forge_updates.json"
+description = '''
+Sully's Mod aims to add interesting features while still keeping a vanilla feeling. While the mod's main focus is on entities it tries to add features for every type of minecraft player, explorers, builders, redstone engineers and more.'''
+displayTest = "MATCH_VERSION"
+
+[[dependencies.sullysmod_additions]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[47,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.sullysmod_additions]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.sullysmod_additions]]
+    modId = "blueprint"
+    mandatory = true
+    versionRange = "[7.0.0,)"
+    ordering = "BEFORE"
+    side = "BOTH"
+
+[[dependencies.sullysmod_additions]]
+    modId = "geckolib"
+    mandatory = true
+    versionRange = "[4.2.2,)"
+    ordering = "BEFORE"
+    side = "BOTH"
+
+[[dependencies.sullysmod_additions]]
+    modId = "sullysmod"
+    mandatory = true
+    versionRange = "[3.1.1.1-beta,)"
+    ordering = "BEFORE"
+    side = "BOTH"
+
+[modproperties.sullysmod]
+    catalogueImageIcon = "sullysmod_icon.png"
+    configuredBackground = "sullysmod:textures/block/polished_jade_bricks.png"
