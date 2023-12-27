@@ -1,5 +1,5 @@
 {
-  "parent": "blueprint:block/vertical_slab",
+  "parent": "sullysmod_additions:block/vertical_slab",
   "textures": {
     "bottom": "sullysmod:block/rough_jade_tiles",
     "side": "sullysmod:block/rough_jade_tiles",

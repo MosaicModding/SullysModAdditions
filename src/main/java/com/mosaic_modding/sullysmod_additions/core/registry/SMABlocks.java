@@ -1,6 +1,7 @@
 package com.mosaic_modding.sullysmod_additions.core.registry;
 
 import com.mosaic_modding.sullysmod_additions.SullysModAdditions;
+import com.mosaic_modding.sullysmod_additions.common.blocks.SMAVerticalSlabBlock;
 import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import com.uraneptus.sullysmod.core.other.SMProperties;
@@ -31,7 +32,7 @@ public class SMABlocks {
 
     public static RegistryObject<Block> createVerticalSlab(RegistryObject<Block> parent, BlockBehaviour.Properties properties) {
         String name = removeS(parent.getId().getPath()) + "_vertical_slab";
-        RegistryObject<Block> regObject = HELPER.createBlock(name, () -> new VerticalSlabBlock(properties));
+        RegistryObject<Block> regObject = HELPER.createBlock(name, () -> new SMAVerticalSlabBlock(parent, properties));
         VERTICAL_SLABS.put(regObject, parent);
 
         return regObject;

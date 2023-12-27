@@ -1,6 +1,7 @@
 package com.mosaic_modding.sullysmod_additions.data.client;
 
 import com.mosaic_modding.sullysmod_additions.SullysModAdditions;
+import com.mosaic_modding.sullysmod_additions.common.blocks.SMAVerticalSlabBlock;
 import com.mosaic_modding.sullysmod_additions.core.registry.SMABlocks;
 import com.mosaic_modding.sullysmod_additions.data.SMADatagenUtil;
 import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
@@ -39,20 +40,18 @@ public class SMABlockStateProvider extends BlockStateProvider {
 
     }
 
-
-    //TODO change parent model to own thing
     private void modVerticalSlabBlock(Supplier<? extends Block> slab, Supplier<? extends Block> parent) {
         ModelFile model = this.models()
-                .withExistingParent(name(slab.get()), blueprintBlockLocation("vertical_slab"))
+                .withExistingParent(name(slab.get()), modBlockLocation("vertical_slab"))
                 .texture("top", SMDatagenUtil.modBlockLocation(name(parent.get())))
                 .texture("bottom", SMDatagenUtil.modBlockLocation(name(parent.get())))
                 .texture("side", SMDatagenUtil.modBlockLocation(name(parent.get())));
 
         getVariantBuilder(slab.get())
-                .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.NORTH).addModels(new ConfiguredModel(model, 0, 0, true))
-                .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.SOUTH).addModels(new ConfiguredModel(model, 0, 180, true))
-                .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.EAST).addModels(new ConfiguredModel(model, 0, 90, true))
-                .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.WEST).addModels(new ConfiguredModel(model, 0, 270, true))
-                .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.DOUBLE).addModels(new ConfiguredModel(this.models().getExistingFile(SMDatagenUtil.modBlockLocation(name(parent.get())))));
+                .partialState().with(SMAVerticalSlabBlock.TYPE, SMAVerticalSlabBlock.VerticalSlabType.NORTH).addModels(new ConfiguredModel(model, 0, 0, true))
+                .partialState().with(SMAVerticalSlabBlock.TYPE, SMAVerticalSlabBlock.VerticalSlabType.SOUTH).addModels(new ConfiguredModel(model, 0, 180, true))
+                .partialState().with(SMAVerticalSlabBlock.TYPE, SMAVerticalSlabBlock.VerticalSlabType.EAST).addModels(new ConfiguredModel(model, 0, 90, true))
+                .partialState().with(SMAVerticalSlabBlock.TYPE, SMAVerticalSlabBlock.VerticalSlabType.WEST).addModels(new ConfiguredModel(model, 0, 270, true))
+                .partialState().with(SMAVerticalSlabBlock.TYPE, SMAVerticalSlabBlock.VerticalSlabType.DOUBLE).addModels(new ConfiguredModel(this.models().getExistingFile(SMDatagenUtil.modBlockLocation(name(parent.get())))));
     }
 }
