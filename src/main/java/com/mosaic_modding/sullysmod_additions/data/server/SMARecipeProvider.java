@@ -1,6 +1,7 @@
 package com.mosaic_modding.sullysmod_additions.data.server;
 
 import com.mosaic_modding.sullysmod_additions.SullysModAdditions;
+import com.mosaic_modding.sullysmod_additions.core.integration.VerticalSlabsCompat;
 import com.mosaic_modding.sullysmod_additions.core.registry.SMABlocks;
 import com.mosaic_modding.sullysmod_additions.core.registry.SMAItems;
 import com.mosaic_modding.sullysmod_additions.data.SMADatagenUtil;
@@ -43,6 +44,9 @@ public class SMARecipeProvider extends SMRecipeProvider {
 
         verticalSlabPolishing(SMABlocks.ROUGH_JADE_BRICK_VERTICAL_SLAB, SMABlocks.POLISHED_JADE_BRICK_VERTICAL_SLAB, consumer);
         verticalSlabPolishing(SMABlocks.ROUGH_JADE_TILE_VERTICAL_SLAB, SMABlocks.POLISHED_JADE_TILE_VERTICAL_SLAB, consumer);
+
+        vscJadePolishing(CompatHandler.VSCID, VerticalSlabsCompat.getVSCBlock(SMABlocks.ROUGH_JADE_BRICK_VERTICAL_SLAB.get()), VerticalSlabsCompat.getVSCBlock(SMABlocks.POLISHED_JADE_BRICK_VERTICAL_SLAB.get()), consumer);
+        vscJadePolishing(CompatHandler.VSCID, VerticalSlabsCompat.getVSCBlock(SMABlocks.ROUGH_JADE_TILE_VERTICAL_SLAB.get()), VerticalSlabsCompat.getVSCBlock(SMABlocks.POLISHED_JADE_TILE_VERTICAL_SLAB.get()), consumer);
     }
 
     private static void modLoadedCookingRecipes(String modId, Supplier<? extends ItemLike> ingredient, Supplier<? extends ItemLike> result, float experience, Consumer<FinishedRecipe> consumer) {
@@ -96,6 +100,15 @@ public class SMARecipeProvider extends SMRecipeProvider {
         ConditionalRecipe.builder()
                 .addCondition(new QuarkFlagRecipeCondition(SMADatagenUtil.QUARK_FLAG, "vertical_slabs"))
                 .addRecipe(consumer1 -> GrindstonePolishingRecipeBuilder.grindstonePolishing(RecipeCategory.BUILDING_BLOCKS, polished.get(), 1, 0).requires(slab.get()).save(consumer1, "_from_" + ingredientName))
+                .build(consumer, SullysMod.modPrefix("grindstone_polishing/" + resultName + "_from_" + ingredientName));
+    }
+
+    private static void vscJadePolishing(String modId, ItemLike slab, ItemLike polished, Consumer<FinishedRecipe> consumer) {
+        String ingredientName = getItemName(slab).replace("sullysmod/", "vsc_");
+        String resultName = getItemName(polished).replace("sullysmod/", "vsc_");
+        ConditionalRecipe.builder()
+                .addCondition(new ModLoadedCondition(modId))
+                .addRecipe(consumer1 -> GrindstonePolishingRecipeBuilder.grindstonePolishing(RecipeCategory.BUILDING_BLOCKS, polished, 1, 0).requires(slab).save(consumer1, "_from_" + ingredientName))
                 .build(consumer, SullysMod.modPrefix("grindstone_polishing/" + resultName + "_from_" + ingredientName));
     }
 }
