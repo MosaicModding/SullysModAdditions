@@ -23,7 +23,4 @@ public class SMAItems {
     public static final RegistryObject<Item> LANTERNFISH_ROLL = HELPER.createItem("lanternfish_roll", () -> new Item(PropertyUtil.food(SMAProperties.Foods.LANTERNFISH_ROLL_FOOD)));
     public static final RegistryObject<Item> CAVE_CHUM_BUCKET = HELPER.createItem("cave_chum_bucket", () -> new SMAFoodBucketItem(SMAProperties.Items.CAVE_CHUM_BUCKET));
 
-
-
-
 }

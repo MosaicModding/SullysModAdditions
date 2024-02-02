@@ -1,25 +1,18 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "stoneworks"
-        }
-      ],
-      "recipe": {
-        "type": "sullysmod:grindstone_polishing",
-        "experience": 0,
-        "ingredients": [
-          {
-            "item": "minecraft:dark_prismarine"
-          }
-        ],
-        "result": {
-          "item": "stoneworks:polished_dark_prismarine"
-        }
-      }
+      "item": "minecraft:dark_prismarine"
+    }
+  ],
+  "result": {
+    "item": "stoneworks:polished_dark_prismarine"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "stoneworks"
     }
   ]
 }

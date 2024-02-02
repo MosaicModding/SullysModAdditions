@@ -1,25 +1,18 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "darkerdepths"
-        }
-      ],
-      "recipe": {
-        "type": "sullysmod:grindstone_polishing",
-        "experience": 0,
-        "ingredients": [
-          {
-            "item": "darkerdepths:shale_slab"
-          }
-        ],
-        "result": {
-          "item": "darkerdepths:polished_shale_slab"
-        }
-      }
+      "item": "darkerdepths:shale_slab"
+    }
+  ],
+  "result": {
+    "item": "darkerdepths:polished_shale_slab"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "darkerdepths"
     }
   ]
 }

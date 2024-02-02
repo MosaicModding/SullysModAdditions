@@ -1,25 +1,18 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "enlightened_end"
-        }
-      ],
-      "recipe": {
-        "type": "sullysmod:grindstone_polishing",
-        "experience": 0,
-        "ingredients": [
-          {
-            "item": "enlightened_end:malachite_stairs"
-          }
-        ],
-        "result": {
-          "item": "enlightened_end:polished_malachite_stairs"
-        }
-      }
+      "item": "enlightened_end:malachite_stairs"
+    }
+  ],
+  "result": {
+    "item": "enlightened_end:polished_malachite_stairs"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enlightened_end"
     }
   ]
 }

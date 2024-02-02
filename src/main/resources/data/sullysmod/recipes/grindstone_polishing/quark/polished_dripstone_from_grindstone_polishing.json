@@ -1,25 +1,18 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "quark"
-        }
-      ],
-      "recipe": {
-        "type": "sullysmod:grindstone_polishing",
-        "experience": 0,
-        "ingredients": [
-          {
-            "item": "minecraft:dripstone_block"
-          }
-        ],
-        "result": {
-          "item": "quark:polished_dripstone"
-        }
-      }
+      "item": "minecraft:dripstone_block"
+    }
+  ],
+  "result": {
+    "item": "quark:polished_dripstone"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
     }
   ]
 }

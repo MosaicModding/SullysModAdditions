@@ -1,25 +1,18 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "quark"
-        }
-      ],
-      "recipe": {
-        "type": "sullysmod:grindstone_polishing",
-        "experience": 0,
-        "ingredients": [
-          {
-            "item": "quark:jasper_stairs"
-          }
-        ],
-        "result": {
-          "item": "quark:polished_jasper_stairs"
-        }
-      }
+      "item": "quark:jasper_stairs"
+    }
+  ],
+  "result": {
+    "item": "quark:polished_jasper_stairs"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "quark"
     }
   ]
 }

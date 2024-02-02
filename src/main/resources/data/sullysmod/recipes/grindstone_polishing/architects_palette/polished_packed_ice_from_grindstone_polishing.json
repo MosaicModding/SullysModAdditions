@@ -1,25 +1,18 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
     {
-      "conditions": [
-        {
-          "type": "forge:mod_loaded",
-          "modid": "architects_palette"
-        }
-      ],
-      "recipe": {
-        "type": "sullysmod:grindstone_polishing",
-        "experience": 0,
-        "ingredients": [
-          {
-            "item": "minecraft:packed_ice"
-          }
-        ],
-        "result": {
-          "item": "architects_palette:polished_packed_ice"
-        }
-      }
+      "item": "minecraft:packed_ice"
+    }
+  ],
+  "result": {
+    "item": "architects_palette:polished_packed_ice"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "architects_palette"
     }
   ]
 }
