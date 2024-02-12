@@ -48,7 +48,7 @@ displayTest = "MATCH_VERSION"
     modId = "sullysmod"
     mandatory = true
     versionRange = "[3.1.1.1-beta,)"
-    ordering = "BEFORE"
+    ordering = "AFTER"
     side = "BOTH"
 
 [modproperties.sullysmod]

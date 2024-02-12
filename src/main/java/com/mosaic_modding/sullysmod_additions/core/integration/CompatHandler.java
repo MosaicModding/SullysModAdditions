@@ -12,6 +12,8 @@ public class CompatHandler {
     public static final boolean VSCLOADED = isLoaded(VSCID);
     public static final String COPPERATIVE = "copperative";
     public static final boolean COPPERATIVE_LOADED = isLoaded(COPPERATIVE);
+    public static final String TFID = "twilightforest";
+    public static final boolean TF_LOADED = isLoaded(TFID);
     public static boolean isLoaded(String id) {
         return ModList.get().isLoaded(id);
     }
@@ -20,6 +22,7 @@ public class CompatHandler {
         if (loadCompat(FDLOADED)) FDCompat.init();
         if (loadCompat(QUARLOADED && !VSCLOADED)) VerticalSlabsCompat.init();
         if (loadCompat(COPPERATIVE_LOADED)) CopperativeCompat.init();
+        if (loadCompat(TF_LOADED)) TFCompat.init();
     }
 
     private static boolean loadCompat(boolean additionalFlags) {

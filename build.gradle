@@ -113,6 +113,7 @@ dependencies {
     implementation fg.deobf("curse.maven:supplementaries-412082:4651057")
     implementation fg.deobf("curse.maven:vertical-slabs-compat-724387:4974509")
     implementation fg.deobf("curse.maven:copperative-867868:4685249")
+    implementation fg.deobf("curse.maven:the-twilight-forest-227639:5071019")
     //runtimeOnly fg.deobf("curse.maven:quark-243121:4140000")
     //runtimeOnly fg.deobf("curse.maven:autoreglib-250363:4100299")
     runtimeOnly fg.deobf("curse.maven:catalogue-459701:4590890")
