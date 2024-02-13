@@ -26,7 +26,6 @@ public class TFCompat {
 
     public static void handleLanternfishSpawn(SpawnPlacementRegisterEvent event) {
         if (!isActive) return;
-        //TODO seems to break regular spawning idk
         event.register(SMEntityTypes.LANTERNFISH.get(), SpawnPlacements.Type.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, TFCompat::lanternfishTFSpawn, SpawnPlacementRegisterEvent.Operation.REPLACE);
     }
 
